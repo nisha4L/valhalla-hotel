@@ -7,8 +7,8 @@ export default defineConfig({
   name: 'default',
   title: 'my-valhalla',
 
-  projectId: 'p9xuemr6',
-  dataset: 'production',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID as string,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET as string,
   basePath : '/studio',
 
   plugins: [structureTool(), visionTool()],
